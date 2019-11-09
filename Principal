@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //INCOMPLETO...
+    char tipo;
+    int dia, mes, entrada, saida, i=0, hora, minuto;
+    float diaria = 7.00, mensal = 4.50;
+
+    printf("O Sr(a) é um cliente mensal[M] ou Diario[D].\n");
+    do{
+        scanf("%c", &tipo);
+        if(tipo != 'M' || tipo != 'D'){
+            printf("Tipo Invalido, por favor tente novamente.\n");
+        }
+    }while(tipo != 'M' || tipo != 'D');
+
+    printf("\nHorario de entrada\nHoras[0-24]: ");
+    scanf("%i", &hora);
+
+    printf("Minutos[0-60]: ");
+    scanf("%i", &minuto);
+
+    entrada = (hora * 60) + minuto;
+
+    return 0;
+}
